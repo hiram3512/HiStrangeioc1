@@ -5,7 +5,7 @@ namespace Test
 {
     public class TestView : View
     {
-        [Inject]
+        [Inject(ContextKeys.CONTEXT_DISPATCHER)]
         //通过[Inject],我们可以得到dispatcher=strangeioc的事件分发器
         //如果没有[Inject],dispatcher的值==null
         public IEventDispatcher dispatcher { get; set; }
